@@ -1,0 +1,23 @@
+{
+  "name": "z402-monorepo",
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "examples/*"
+  ],
+  "scripts": {
+    "build": "npm -w z402 run build && npm -w z402-storage-sqlite run build && npm -w z402-storage-postgres run build && npm -w z402-storage-libsql run build && npm -w z402-client run build",
+    "build-core": "npm -w z402 run build",
+    "build-client": "npm -w z402 run build",
+    "typecheck": "npm run typecheck -w z402 && npm run typecheck -ws",
+    "lint": "npm run lint -ws",
+    "test": "npm run test -ws",
+    "fmt": "prettier -w ."
+  },
+  "devDependencies": {
+    "typescript": "^5.6.0",
+    "eslint": "^9.0.0",
+    "prettier": "^3.3.0",
+    "tsup": "^8.0.0"
+  }
+}

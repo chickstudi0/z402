@@ -1,0 +1,22 @@
+{
+  "name": "example-postgres",
+  "version": "0.1.0",
+  "type": "module",
+  "dependencies": {
+    "z402": "file:../../packages/core",
+    "z402-storage-postgres": "file:../../packages/storage-postgres",
+    "@neondatabase/serverless": "^1.0.2",
+    "@solana/web3.js": "^1.95.0",
+    "express": "^4 || ^5"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.0",
+    "tsx": "^4.20.6",
+    "@types/node": "^20.12.7",
+    "@types/express": "^5.0.5"
+  },
+  "scripts": {
+    "start": "tsx index.ts",
+     "typecheck": "tsc -p tsconfig.json --noEmit"
+  }
+}

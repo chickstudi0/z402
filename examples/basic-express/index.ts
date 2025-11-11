@@ -1,0 +1,25 @@
+import express from "express";
+import { createPaymentContext } from "z402/express";
+import { type PaymentResult } from "z402";
+import { Connection, clusterApiUrl } from "@solana/web3.js";
+
+async function main() {
+  const app = express();
+  const z402 = await createPaymentContext({
+    connection: new Connection(clusterApiUrl("devnet")),
+  });
+
+  app.get("/hello", (req, res) => {
+    res.send("ok");
+  });
+
+  // Example paid endpoint 0.001 SOL
+  app.post("/paid", z402.route("DestinationWalletPubkeyHere", "1000000"), (req, res) => {
+    console.log(res.locals.payment as PaymentResult)
+    res.send({"message": "Payment accepted! here is your paid content.", payment: res.locals.payment });
+  });
+
+  app.listen(3000, () => console.log("Example server running on http://localhost:3000"));
+}
+
+main();
