@@ -1,6 +1,7 @@
 {
   "name": "z402-client",
   "version": "0.1.0",
+  "description": "Client SDK for Zero Trust x402 protocol",
   "type": "module",
   "main": "dist/index.cjs",
   "module": "dist/index.js",
@@ -27,8 +28,24 @@
     "build:types": "tsc -p tsconfig.build.json",
     "typecheck": "tsc -p tsconfig.json --noEmit"
   },
-  "keywords": ["solana", "x402", "payments", "express", "middleware", "zero-trust", "z402"],
+  "files": [
+    "dist/",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "solana",
+    "x402",
+    "payments",
+    "express",
+    "middleware",
+    "zero-trust",
+    "z402"
+  ],
   "author": "chickstudio",
-  "repository": { "type":"git", "url":"git+https://github.com/chickstudi0/z402.git" },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chickstudi0/z402.git"
+  },
   "license": "MIT"
 }

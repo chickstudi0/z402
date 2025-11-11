@@ -1,6 +1,7 @@
 {
   "name": "z402-storage-sqlite",
   "version": "0.1.0",
+  "description": "SQLite storage adapter for z402",
   "type": "module",
   "main": "dist/index.cjs",
   "module": "dist/index.js",
@@ -12,9 +13,10 @@
       "require": "./dist/index.cjs"
     }
   },
+  "sideEffects": false,
   "dependencies": {
-    "z402": "file:../core",
-    "better-sqlite3": "^9.4.0"
+    "better-sqlite3": "^9.4.0",
+    "z402": "file:../core"
   },
   "devDependencies": {
     "tsup": "^8.0.0",
@@ -26,6 +28,15 @@
     "build:types": "tsc -p tsconfig.build.json",
     "typecheck": "tsc -p tsconfig.json --noEmit"
   },
-  "repository": { "type":"git", "url":"git+https://github.com/chickstudi0/z402.git" },
+  "files": [
+    "dist/",
+    "README.md",
+    "LICENSE"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chickstudi0/z402.git"
+  },
+  "author": "chickstudio",
   "license": "MIT"
 }

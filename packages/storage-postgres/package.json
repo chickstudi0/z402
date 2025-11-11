@@ -1,14 +1,21 @@
 {
   "name": "z402-storage-postgres",
   "version": "0.1.0",
+  "description": "Postgres storage adapter for z402",
   "type": "module",
   "main": "dist/index.cjs",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
-  "exports": { ".": { "types": "./dist/index.d.ts", "import": "./dist/index.js", "require": "./dist/index.cjs" } },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
   "sideEffects": false,
   "dependencies": {
-   "z402": "file:../core"
+    "z402": "file:../core"
   },
   "optionalDependencies": {
     "@neondatabase/serverless": "^0.10.3",
@@ -23,6 +30,15 @@
     "build:types": "tsc -p tsconfig.build.json",
     "typecheck": "tsc -p tsconfig.json --noEmit"
   },
-  "repository": { "type":"git", "url":"git+https://github.com/chickstudi0/z402.git" },
+  "files": [
+    "dist/",
+    "README.md",
+    "LICENSE"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chickstudi0/z402.git"
+  },
+  "author": "chickstudio",
   "license": "MIT"
 }

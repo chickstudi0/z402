@@ -1,6 +1,6 @@
 {
   "name": "z402",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Zero Trust x402 protocol",
   "type": "module",
   "main": "dist/index.cjs",
@@ -29,11 +29,16 @@
     "build:types": "tsc -p tsconfig.build.json",
     "typecheck": "tsc -p tsconfig.json --noEmit"
   },
+  "files": [
+    "dist/",
+    "README.md",
+    "LICENSE"
+  ],
   "peerDependencies": {
     "express": "^4 || ^5",
     "hono": "^4",
     "@solana/web3.js": "^1.95.0 || ^2",
-    "bs58": "^5",
+    "bs58": "^5 || ^6",
     "tweetnacl": "^1"
   },
   "peerDependenciesMeta": {
@@ -60,6 +65,9 @@
     "z402"
   ],
   "author": "chickstudio",
-  "repository": { "type":"git", "url":"git+https://github.com/chickstudi0/z402.git" },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chickstudi0/z402.git"
+  },
   "license": "MIT"
 }
